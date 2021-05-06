@@ -1,12 +1,10 @@
 # simulation-xyonix-blog
-Text simulation for rare events
-
+Generative text simulation via OpenAI's commerical GPT-3 and EleutherAI's open source GPT-NEO language prediction models.
 GPT stands for Generative pre-trained Transformer 3(GPT-3) which is an autoregressive language model that uses deep learning to produce human-like texts. 
 
 # installation
 
 ```
-
 # create an environment and activate
 python -m venv sim_py36 && source sim_py36/bin/activate
 
