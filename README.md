@@ -14,7 +14,7 @@ pip install python-dotenv openai tensorflow torch torchvision transformers
 ```
 
 > **⚠ IMPORTANT**  
-> Use of GPT-3 requires that you have an API key, which you will receive pending approval of your application at [OpenAI](https://openai.com/blog/openai-api/). Store the keys in a local file, e.g., `~/creds/.openai` and adapt the `simulation_config.py` file by replacing the default path for the **OPENAI_API_KEY_PATH** variable.
+> Use of GPT-3 requires that you have an API key, which you will receive pending approval of your application at [OpenAI](https://openai.com/blog/openai-api/). Store the key in a local file, e.g., `~/creds/.openai` and adapt the `simulation_config.py` file by replacing the default path for the **OPENAI_API_KEY_PATH** variable.
 
 
 # gpt-neo example
