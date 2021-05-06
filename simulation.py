@@ -134,6 +134,7 @@ if __name__ == "__main__":
         "English: How good is the wine here?",
         "French: "]
     PROMPT = '\n'.join(dialog)
-    COMPLETION = gpt3_simulation(PROMPT, stop=['\nEnglish:'], engine='curie', max_tokens=20, temperature=0.5)
+    COMPLETION = gpt3_simulation(PROMPT, stop=['\nEnglish:'], 
+        engine='curie', max_tokens=20, temperature=0.5)
     print('-'*100)
     print(f'prompt: {PROMPT}\n\nGPT-3 completion: {COMPLETION}')
