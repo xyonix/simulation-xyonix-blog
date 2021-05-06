@@ -10,8 +10,7 @@ python -m venv sim_py36 && source sim_py36/bin/activate
 
 # install modules
 pip install --upgrade pip setuptools wheel
-pip install python-dotenv openai
-pip install tensorflow torch torchvision transformers
+pip install python-dotenv openai tensorflow torch torchvision transformers
 ```
 
 > **⚠ IMPORTANT**  
