@@ -48,7 +48,7 @@ def gpt_neo_simulation(
     return_full_text=True,
     temperature=0.9):
     """
-    GPT-NEO text generation, i.e., completion
+    GPT-NEO text generation
 
     :param prompt: text prompt
     :param max_length: maximum number of characters in the completion
@@ -80,7 +80,7 @@ def gpt3_simulation(
     frequency_penalty=1,
     presence_penalty=1,
     failure_retries=3):
-    """Use OpenAI GPT-3 to simulate text.
+    """OpenAI GPT-3 text generation.
     :param prompt: text prompt (str) or list of examples (list) intended to
         be used with collapse=True.
     :param engine: GPT-3 engine to use, must be one of: 'davinci','curie','babbage','ada'.
