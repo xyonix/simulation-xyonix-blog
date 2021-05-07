@@ -44,13 +44,13 @@ GPT-NEO completion: The red fox jumped out of the tree, his paws on the bough an
 ```
     import simulation
 
-    # example of single prompt
+    # GPT-3 example of single prompt
     prompt="I love to eat"
-    completion = simulation.gpt3_neo_simulation(prompt, engine='curie', max_tokens=20)
+    completion = simulation.gpt3_simulation(prompt, engine='curie', max_tokens=20)
     print('-'*100)
     print(f'prompt: {prompt}\n\ncompletion: {completion}')
 
-    # example of collapsed dialog
+    # GPT-3 example of collapsed dialog
     dialog = [
         "English: I do not speak French",
         "French: Je ne parle pas français",
@@ -63,7 +63,7 @@ GPT-NEO completion: The red fox jumped out of the tree, his paws on the bough an
         "English: How good is the wine here?",
         "French: "]
     prompt = '\n'.join(dialog)
-    completion = simulation.gpt3_neo_simulation(prompt, stop=['\nEnglish:'], 
+    completion = simulation.gpt3_simulation(prompt, stop=['\nEnglish:'], 
         engine='curie', max_tokens=20, temperature=0.5)
     print('-'*100)
     print(f'prompt: {prompt}\n\ncompletion: {completion}')
