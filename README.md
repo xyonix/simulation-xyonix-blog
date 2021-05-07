@@ -6,7 +6,7 @@ GPT stands for Generative pre-trained Transformer 3(GPT-3) which is an autoregre
 
 ```
 # create an environment and activate
-python -m venv sim_py36 && source sim_py36/bin/activate
+python -m venv sim_py && source sim_py/bin/activate
 
 # install modules
 pip install --upgrade pip setuptools wheel
@@ -38,7 +38,7 @@ GPT-NEO completion: The red fox jumped out of the tree, his paws on the bough an
 # gpt-3 example
 
 > **⚠ WARNING**  
-> GPT-3 has different engines you can use to generate prompt completions and must be one of: 'davinci','curie','babbage','ada'. These are listed in order of most to least expensive and slowest to fastest. For a cost breakdown, visit [OpenIA Pricing](https://beta.openai.com/pricing). Just because you have an API key does not mean you have unlimited. The standard contract limits you to around $100/month and once you exceed that limit you will be cut off until the start of the next month. To avoid being throttled, try one of the cheaper engines, e.g., 'ada', first to see if the quality of the results is good enough for your use case.
+> GPT-3 has different engines you can use to generate prompt completions and must be one of: 'davinci','curie','babbage','ada'. These are listed in order of most to least expensive and slowest to fastest inference. For a cost breakdown, visit [OpenIA Pricing](https://beta.openai.com/pricing). Just because you have an API key does not mean you have unlimited access. The standard contract limits you to around $100/month and once you exceed that you will be cut off until the start of the next month. To avoid being throttled, try one of the cheaper engines, e.g., 'ada', first to see if the quality of the results is good enough for your use case.
 
 
 ```
