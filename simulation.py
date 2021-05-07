@@ -96,7 +96,6 @@ def gpt3_simulation(
         bigger effort in not repeating words.
     :param presence_penalty: a number between 0 and 1. The higher this value the model will
         make a bigger effort in talking about new topics.
-    :param verbose: if True, verbose mode is turned on.
     :return: prompt completion
     """
 
