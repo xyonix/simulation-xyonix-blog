@@ -5,7 +5,6 @@
 import os
 from dotenv import load_dotenv
 import openai
-from transformers import pipeline
 import simulation_config as conf
 
 # load the OPENAI API key
@@ -17,10 +16,6 @@ try:
 except BaseException as error:
     print('must specify a valid OPENAI_API_KEY_PATH in simulation_config.py')
     raise
-
-# load the got-neo model
-print('Loading EleutherAI/gpt-neo-2.7B model')
-NEO_GENERATOR = pipeline('text-generation', model='EleutherAI/gpt-neo-2.7B')
 
 def gpt_resilient_text_completion(failure_retries, **params):
     """
@@ -40,35 +35,6 @@ def gpt_resilient_text_completion(failure_retries, **params):
             break
 
     return result
-
-def gpt_neo_simulation(
-    prompt,
-    max_length=50,
-    do_sample=True,
-    return_full_text=True,
-    temperature=0.9):
-    """
-    GPT-NEO text generation
-
-    :param prompt: text prompt
-    :param max_length: maximum number of characters in the completion
-    :param do_sample: Whether or not to use sampling.
-        See https://huggingface.co/blog/how-to-generate for more information.
-    :param return_full_text: prefaces the completion with the origin prompt if True.
-    :param temperature: controls the randomness of the completions. 0 is
-        deterministic and 1 is very random.
-    """
-
-    params=dict(
-        max_length=max_length,
-        do_sample=do_sample,
-        temperature=temperature,
-        return_text=True,
-        return_full_text=return_full_text
-    )
-
-    response = NEO_GENERATOR(prompt, **params)
-    return response[0]['generated_text']
 
 def gpt3_simulation(
     prompt,
